@@ -22,8 +22,8 @@ public class PongCanvas
 
         ball = new PongBall(width/2, (height-40)/2 + 5, 3, 4);
 
-        paddle1 = new PongPaddle((height - 40)/2 - 20,25, 10,50);
-        paddle2 = new PongPaddle((height - 40)/2 - 20,width-35,10,50);
+        paddle1 = new PongPaddle((height - 40)/2 - 20,25, 10,70);
+        paddle2 = new PongPaddle((height - 40)/2 - 20,width-35,10,70);
         
         //paddle1 = new PongPaddle(25,(height - 40)/2 - 20,10,50);
         //paddle2 = new PongPaddle(width-35, (height - 40)/2 - 20,10,50);
@@ -148,28 +148,28 @@ public class PongCanvas
         if (e.getKeyChar() == 'a' ||
             e.getKeyChar() == 'A') {
             if (paddle1.getTopY() > 7) {
-                paddle1.moveUp(2);
+                paddle1.moveUp(5);
                 repaint();
             }
         }
         else if (e.getKeyChar() == 'z' ||
                  e.getKeyChar() == 'Z') {
             if (paddle1.getBottomY() < height-30) {
-                paddle1.moveDown(2);
+                paddle1.moveDown(5);
                 repaint();
             }
         }
         else if (e.getKeyChar() == 'k' ||
                  e.getKeyChar() == 'K') {
             if (paddle2.getTopY() > 7) {
-                paddle2.moveUp(2);
+                paddle2.moveUp(5);
                 repaint();
             }
         }
         else if (e.getKeyChar() == 'm' ||
                  e.getKeyChar() == 'M') {
             if (paddle2.getBottomY() < height-30) {
-                paddle2.moveDown(2);
+                paddle2.moveDown(5);
                 repaint();
             }
         }             
